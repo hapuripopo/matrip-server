@@ -1,0 +1,28 @@
+spring:
+
+  datasource:
+    driver-class-name: ${db-driver}
+    url: ${db-url}
+    username: ${db-username}
+    password: ${db-password}
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
+jwt:
+  header: Authentication
+  type: Bearer
+  secret: ${jwt-secret}
+  access-token-lifetime: ${access-token-lifetime}
+  refresh-token-lifetime: ${refresh-token-lifetime}
+
+logging:
+  level:
+    thegrace.project.project1: DEBUG
+
+
